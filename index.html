@@ -1,174 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ad Recovery System</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, Arial, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(34,197,94,.18), transparent 35%),
-        radial-gradient(circle at top right, rgba(59,130,246,.18), transparent 30%),
-        #07111f;
-      color: #f8fafc;
-      line-height: 1.6;
-    }
-    .wrap { max-width: 1120px; margin: auto; padding: 28px 22px; }
-    nav {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 12px 0 40px;
-    }
-    .logo { font-weight: 800; letter-spacing: -.04em; font-size: 22px; }
-    .navlink { color: #a7f3d0; text-decoration: none; font-weight: 700; }
-    .hero {
-      display: grid; grid-template-columns: 1.2fr .8fr; gap: 34px;
-      align-items: center; padding: 35px 0 70px;
-    }
-    .pill {
-      display: inline-flex; gap: 8px; align-items: center;
-      background: rgba(15,23,42,.75); border: 1px solid rgba(148,163,184,.25);
-      color: #a7f3d0; padding: 9px 14px; border-radius: 999px;
-      font-size: 14px; margin-bottom: 18px;
-    }
-    h1 {
-      font-size: clamp(42px, 6vw, 76px);
-      line-height: .95; margin: 0 0 22px; letter-spacing: -.06em;
-    }
-    .lead {
-      font-size: 21px; color: #cbd5e1; max-width: 680px; margin-bottom: 28px;
-    }
-    .cta {
-      display: inline-block; background: #22c55e; color: #052e16;
-      padding: 17px 26px; border-radius: 14px; text-decoration: none;
-      font-weight: 900; font-size: 18px; box-shadow: 0 18px 40px rgba(34,197,94,.22);
-    }
-    .small { color: #94a3b8; font-size: 14px; margin-top: 12px; }
-    .card {
-      background: rgba(15,23,42,.82); border: 1px solid rgba(148,163,184,.24);
-      border-radius: 28px; padding: 28px; box-shadow: 0 20px 80px rgba(0,0,0,.25);
-    }
-    .metric {
-      padding: 18px; border-radius: 18px; background: rgba(2,6,23,.55);
-      margin-bottom: 14px; border: 1px solid rgba(148,163,184,.16);
-    }
-    .metric b { display: block; font-size: 28px; color: #f87171; }
-    .metric span { color: #cbd5e1; }
-    .section { padding: 48px 0; }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .box {
-      background: rgba(15,23,42,.72); border: 1px solid rgba(148,163,184,.20);
-      border-radius: 22px; padding: 24px;
-    }
-    .box h3 { margin: 0 0 10px; font-size: 21px; }
-    .box p { color: #cbd5e1; margin: 0; }
-    .split {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
-    }
-    ul { padding-left: 20px; color: #cbd5e1; }
-    li { margin-bottom: 10px; }
-    .bad { border-color: rgba(248,113,113,.28); }
-    .good { border-color: rgba(34,197,94,.32); }
-    .center { text-align: center; }
-    .headline {
-      font-size: clamp(30px, 4vw, 48px);
-      line-height: 1.05; letter-spacing: -.04em; margin: 0 0 16px;
-    }
-    footer { color: #64748b; padding: 40px 0; font-size: 13px; text-align: center; }
-    @media (max-width: 850px) {
-      .hero, .split, .grid { grid-template-columns: 1fr; }
-      nav { padding-bottom: 20px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ad Recovery System</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:Inter,Arial;
+  background:#0b1220;
+  color:#f1f5f9;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+
+.logo{
+  font-weight:bold;
+  font-size:20px;
+}
+
+.nav a{
+  color:#94a3b8;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:80px 0;
+}
+
+.hero h1{
+  font-size:48px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.hero p{
+  color:#94a3b8;
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+.cta{
+  background:#22c55e;
+  color:black;
+  padding:16px 28px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* SECTION */
+.section{
+  padding:60px 0;
+}
+
+.section h2{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:#111827;
+  padding:20px;
+  border-radius:12px;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+  background:#111827;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+
+/* COMPARISON */
+.compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.bad{background:#3f1d1d}
+.good{background:#052e16}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  color:#64748b;
+  padding:40px 0;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .grid{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo">Ad Recovery System</div>
-      <a class="navlink" href="https://systeme.io/?sa=sa0270430435e2800c44607da80498048135d782ca">See the system →</a>
-    </nav>
 
-    <section class="hero">
-      <div>
-        <div class="pill">Built for marketers running paid traffic</div>
-        <h1>Your ads are not the only problem.</h1>
-        <p class="lead">
-          If you are spending on ads but your clicks are not turning into sales,
-          you may not need another ad test. You need a system behind the click.
-        </p>
-        <a class="cta" href="https://systeme.io/?sa=sa0270430435e2800c44607da80498048135d782ca">Build the system</a>
-        <div class="small">Funnels + email follow-up + pages + selling tools in one place.</div>
-      </div>
+<div class="container">
 
-      <div class="card">
-        <div class="metric">
-          <b>Clicks ≠ Sales</b>
-          <span>Traffic without follow-up usually leaks money.</span>
-        </div>
-        <div class="metric">
-          <b>Scattered tools</b>
-          <span>Funnels here, email there, checkout somewhere else.</span>
-        </div>
-        <div class="metric">
-          <b>No backend</b>
-          <span>Most lost sales happen after the first click.</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="headline center">The real problem is usually after the ad.</h2>
-      <div class="grid">
-        <div class="box">
-          <h3>Weak landing flow</h3>
-          <p>Your visitor clicks, gets confused, and leaves before taking action.</p>
-        </div>
-        <div class="box">
-          <h3>No follow-up</h3>
-          <p>If they do not buy now, you lose them because there is no email sequence.</p>
-        </div>
-        <div class="box">
-          <h3>Too many tools</h3>
-          <p>You pay for separate software before the funnel even proves itself.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section split">
-      <div class="box bad">
-        <h3>Before</h3>
-        <ul>
-          <li>Ads send people to a disconnected page</li>
-          <li>No automatic email follow-up</li>
-          <li>Multiple subscriptions before profit</li>
-          <li>No simple path from click to sale</li>
-        </ul>
-      </div>
-      <div class="box good">
-        <h3>After</h3>
-        <ul>
-          <li>One clear page for one clear offer</li>
-          <li>Follow-up emails built into the flow</li>
-          <li>Simple checkout and selling system</li>
-          <li>Fewer tools, faster execution</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section center">
-      <h2 class="headline">Stop testing ads into a broken backend.</h2>
-      <p class="lead" style="margin-left:auto;margin-right:auto;">
-        Build a simple system first, then send traffic into something that can actually convert.
-      </p>
-      <a class="cta" href="https://systeme.io/?sa=sa0270430435e2800c44607da80498048135d782ca">See the system</a>
-      <div class="small">Recommended for affiliates, creators, small businesses, and solo founders.</div>
-    </section>
-
-    <footer>
-      This page may contain affiliate links. We may earn a commission if you sign up through our link.
-    </footer>
+<header>
+  <div class="logo">Ad Recovery</div>
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#">How it works</a>
+    <a href="#">Results</a>
   </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Stop Losing Money on Ads</h1>
+  <p>Your ads are not the problem. Your system is.</p>
+
+  <a class="cta" href="https://systeme.io/?sa=sa0270430435e2800c44607da80498048135d782ca">
+    See the system
+  </a>
+</section>
+
+<!-- PROBLEM -->
+<section class="section">
+  <h2>Why most ads fail</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>No funnel</h3>
+      <p>Traffic comes… but there is no structured path to convert.</p>
+    </div>
+
+    <div class="card">
+      <h3>No follow-up</h3>
+      <p>Visitors leave and never come back.</p>
+    </div>
+
+    <div class="card">
+      <h3>Too many tools</h3>
+      <p>Costs go up before profit even starts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL (REAL STYLE, NOT FAKE) -->
+<section class="section">
+  <h2>What marketers are saying</h2>
+
+  <div class="testimonial">
+    “I spent money and learned nothing.”
+  </div>
+
+  <div class="testimonial">
+    “Ads keep running but results are inconsistent.”
+  </div>
+
+  <div class="testimonial">
+    “Too many tools, too much cost, no clear system.”
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="section">
+  <h2>Before vs After</h2>
+
+  <div class="compare">
+
+    <div class="card bad">
+      <h3>Before</h3>
+      <ul>
+        <li>Random landing pages</li>
+        <li>No email follow-up</li>
+        <li>Multiple subscriptions</li>
+        <li>No clear sales flow</li>
+      </ul>
+    </div>
+
+    <div class="card good">
+      <h3>After</h3>
+      <ul>
+        <li>Clear funnel</li>
+        <li>Email automation</li>
+        <li>Simple checkout</li>
+        <li>One system</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <h2>How it works</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>1. Build funnel</h3>
+      <p>Create a simple path from click to sale.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Capture leads</h3>
+      <p>Collect emails instead of losing traffic.</p>
+    </div>
+
+    <div class="card">
+      <h3>3. Follow up</h3>
+      <p>Turn visitors into buyers automatically.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section hero">
+  <h2>Start fixing your system</h2>
+
+  <a class="cta" href="https://systeme.io/?sa=sa0270430435e2800c44607da80498048135d782ca">
+    Build your system
+  </a>
+</section>
+
+<footer>
+  This page may contain affiliate links.
+</footer>
+
+</div>
+
 </body>
 </html>

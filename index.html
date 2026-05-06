@@ -1406,23 +1406,27 @@ document.querySelectorAll('.struck').forEach(el => {
 });
 </script>
 
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
-  const conversionLinks = document.querySelectorAll(
-    'a[href*="systeme.io"], a[href*="sa="], a[href*="See"], a.cta, .cta a, .btn, .button'
+  const systemButtons = document.querySelectorAll(
+    'a[href*="systeme.io"]'
   );
 
-  conversionLinks.forEach(function (link) {
-    link.addEventListener("click", function () {
+  systemButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
       if (typeof fbq === "function") {
         fbq("track", "InitiateCheckout", {
           content_name: "Ad Recovery System",
-          content_category: "Post Click Conversion System"
+          content_category: "Post Click Conversion System",
+          page_url: window.location.href,
+          button_text: button.innerText.trim(),
+          destination_url: button.href
         });
       }
     });
   });
 });
 </script>
+  
 </body>
 </html>
